@@ -1,2 +1,44 @@
-# Data-Science-Project
-«An individual Data Analysis project (Autumn 1405) for NYC Yellow Taxi demand forecasting (Path A, Jan–Mar 2024), covering problem registration &amp; data audit (Phase 1), preparation &amp; unsupervised exploration (Phase 2), predictive modeling &amp; evaluation (Phase 3), advanced robustness analysis (Phase 4), and synthesis, ethics &amp; reporting (Phase 5).»
+
+# 🚖 عنوان پروژه: پیش‌بینی ساعتی تقاضای تاکسی‌های زرد نیویورک (NYC Yellow Taxi Demand Forecasting)
+
+<p align="right">
+  <img src="https://img.shields.io/badge/Course-Data%20Analysis%20(Fall%201405)-blue.svg" alt="Course">
+  <img src="https://img.shields.io/badge/Status-Phase%201%20Completed-success.svg" alt="Status">
+  <img src="https://img.shields.io/badge/Path%20A-NYC%20TLC%20Trip%20Record%20Data-orange.svg" alt="Path">
+  <img src="https://img.shields.io/badge/Python-3.10%2B-blue.svg" alt="Python">
+</p>
+
+این مخزن شامل پیاده‌سازی کد (از جمله ممیزی داده و تحلیل اکتشافی جامع)، گزارش فاز ۱ و کارت پروژه درس تحلیل داده است. تمرکز این فاز مطابق شیوه‌نامه، بر ممیزی ساختاری و متاداده، کمّی‌سازی ناهنجاری‌ها و مقادیر مفقود، بازسازی سری زمانی ساعتی منسجم با مدیریت ساعت تابستانی (DST)، شناسایی ریسک‌های نشت داده و تحلیل اکتشافی جامع (EDA) روی بیش از ۹.۵۵ میلیون رکورد سفر تاکسی‌های زرد نیویورک قرار دارد (عملیات پاک‌سازی و مهندسی ویژگی‌ها در فازهای بعدی انجام خواهد شد).
+
+---
+
+## 📌 مشخصات و شناسنامه پروژه
+
+- **عنوان پروژه:** پیش‌بینی ساعتی تقاضای تاکسی‌های زرد نیویورک بر حسب زمان
+- **مسیر انتخابی:** **مسیر الف (Path A: NYC TLC Trip Record Data)**
+- **بازه زمانی داده‌ها:** ۱ ژانویه ۲۰۲۴ تا ۳۱ مارس ۲۰۲۴ (فصل اول / Q1 2024)
+- **واحد مشاهده / پیش‌بینی:** پنجره‌های زمانی ۱ ساعته تقویمی در منطقه زمانی محلی نیویورک (`America/New_York`)
+- **متغیر هدف (Target):** تعداد کل سفرهای آغازشده در هر ساعت (`hourly_pickup_count`)
+- **وضعیت فعلی:** **تکمیل‌شده تا پایان فاز ۱** (ممیزی، کمّی‌سازی، سری زمانی و EDA)
+
+---
+
+## 📂 کاتالوگ فایل‌های تحویلی ریپازیتوری (Deliverables)
+
+| نام فایل | نقش و نوع محتوا | توضیحات |
+| :--- | :--- | :--- |
+| **`notebook-code.ipynb`** | 💻 **کد پیاده‌سازی و بازتولیدپذیر** | نوت‌بوک پایتون شامل بارگذاری داده‌های خام، ممیزی و کمّی‌سازی رکوردهای تکراری/مفقود، فیلتر بازه زمانی، هندلینگ DST و رسم بیش از ۲۰ نمودار آماری. |
+| **`PROJECT_CARD.md`** | 📋 **شناسنامه و منشور پروژه** | مستند مرجع شامل تعریف مسئله، واحد پیش‌بینی، متریک‌ها (MAE, RMSE, WAPE)، مدل بیس‌لاین، افراز داده زمانی و ممیزی ریسک نشت داده (Leakage). |
+| **`گزارش reports - phase1؛.md`** | 📑 **گزارش جامع تحلیلی فاز ۱** | گزارش تشریحی شامل دیاگرام جریان داده، جداول کمّی‌سازی ممیزی(تصمیم گیری اولیه) ، تحلیل روندهای ساعتی/هفته‌ای، ریشه‌یابی ناهنجاری‌ها و چارچوب جلوگیری از نشت داده. |
+
+---
+
+## ⚠️ راهنمای اجرای نوت‌بوک و تنظیم مسیر (Path Setup)
+
+> **🛑 نکته مهم قبل از اجرای سلول دوم:**
+> برای جلوگیری از خطای مسیر (`FileNotFoundError`)  و تصاویر نمودارها، **قبل از اجرای سلول دوم**، مسیر پروژه (`PROJECT_ROOT`) را متناسب با سیستم خود تنظیم نمایید:
+```python
+# مسیر پیش‌فرض در کد:
+PROJECT_ROOT = Path("C:/Users/Asus/Downloads")
+
+
